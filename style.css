@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Monomakh", system-ui;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: #008170;
+    font-size: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button {
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #fbfcfd;
+    color: #000;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+h1 {
+    color: #fff;
+    font-size: 48px; /* Reduced font size for smaller screens */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.cards-body {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    width: 100%; /* Full width on small screens */
+    max-width: 200px; /* Limit width on larger screens */
+    background-color: #E2DFD0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5C5470;
+}
+
+.btn {
+    margin-top: 15px;
+    color: #6EACDA;
+    padding: 10px 25px;
+    background: transparent;
+    background-color: #17153B;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #003161;
+    color: #FFF4B7;
+}
+
+.btn a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #17153B;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Ensures footer sticks to the bottom */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #6EACDA;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px; /* Smaller font size for mobile */
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 120px; /* Smaller logo for mobile */
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 100%; /* Full width for cards on mobile */
+        max-width: 150px; /* Smaller cards for mobile */
+    }
+
+    .card img {
+        height: 80px; /* Smaller images for mobile */
+    }
+
+    .card p {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px; /* Even smaller font size for very small screens */
+    }
+
+    .card {
+        max-width: 120px; /* Very small cards for very small screens */
+    }
+
+    .card img {
+        height: 60px; /* Very small images for very small screens */
+    }
+
+    .card p {
+        font-size: 14px; /* Very small text for very small screens */
+    }
+
+    .btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
